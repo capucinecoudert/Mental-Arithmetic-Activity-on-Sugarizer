@@ -1,0 +1,10 @@
+#main-toolbar #activity-button {
+  background-image: url(../activity/activity-icon.svg);
+}
+#canvas{
+	text-align:center;
+	background-color: #BDB76B;
+}
+#calculation{
+	font-size:30px;
+}
