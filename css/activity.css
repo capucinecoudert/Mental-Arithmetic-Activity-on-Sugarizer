@@ -8,3 +8,13 @@
 #calculation{
 	font-size:30px;
 }
+#Clock{
+	color: black;
+}
+
+#score{
+	color: white;
+	margin-left: 140px;
+	font-size: 20px;
+}
+

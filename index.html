@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="utf-8" />
-<title>Mental Arithmetic</title>
+<title>Mental Arithmetic Activity</title>
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
 <link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
 	href="lib/sugar-web/graphics/css/sugar-96dpi.css">
@@ -14,24 +14,29 @@
 </head>
 
 <body>
-<div id="main-toolbar" class="toolbar">
-  <button class="toolbutton" id="activity-button" title="My Activity"></button>
-  <button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
-</div>
-<div id="canvas">
-  <h1>Welcome to the mental arithmetic game!</h1>
-  <p>You have to write the answer to the calculation that will dispaly.</p>
-  <br>
-  <span id="calculation"></span>
-  <br><br>
-  <form method="post" action="traitement.php">
-     <p>
-         <label for="response">Your result</label> : <input type="text" name="response" id="response" />
-     </p>
-  </form>
-  <button id="Validate" title="Validate">Validate</button>
-  <div id="final"></div>
-</div>
+  <div id="main-toolbar" class="toolbar">
+    <button class="toolbutton" id="activity-button" title="My Activity"></button>
+    <button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
+    <span id="score">...</span>
+  </div>
+  <div id="canvas">
+    <h1>Welcome to the mental arithmetic game!</h1>
+    <p>You have to write the answer to the calculation that will dispaly.</p>
+    <br>
+    <span id="calculation"></span>
+    <br>
+    <br>
+    <form>
+       <p>
+           <label for="response">Your result</label> : <input type="text" name="response" id="response" />
+         
+       </p>
+       <br>
+       <span id="Clock">...</span>
+    </form>  <button id="my-button" title="Validate">Validate</button>
+    
+    <div id="final"></div>
+  </div>
 </body>
 
 </html>
