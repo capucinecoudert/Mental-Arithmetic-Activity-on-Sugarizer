@@ -12,6 +12,7 @@ define(["sugar-web/activity/activity"], function (activity) {
 		var clock=document.getElementById("Clock");
 		var score_span=document.getElementById("score");
 		var validate=document.getElementById("my-button");
+		var response=document.getElementById("response");
 		var timeout;
 
         validate.onclick = function() {
@@ -51,13 +52,14 @@ define(["sugar-web/activity/activity"], function (activity) {
 			calculation.innerHTML="The calculation is " + number_list[0] +" "
 			    + op[0] +" "+  number_list[1] +" "+ op[1] +" "+  number_list[2];
             display_score();
+            response.value ='';
+            response.focus();
 			decompte();
 		};
 
 	function evaluate () {
 		clearTimeout(timeout);
-	 	var response = document.getElementById("response").value;
-	 	if (response == true_result()){
+	 	if (response.value == true_result()){
 	 		final.innerHTML="Yes! You are right."
 	 		score+=cpt+1;
 	 		display_score();
