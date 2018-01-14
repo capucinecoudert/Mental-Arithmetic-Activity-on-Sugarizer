@@ -14,10 +14,16 @@ define(["sugar-web/activity/activity"], function (activity) {
 		var validate=document.getElementById("my-button");
 		var response=document.getElementById("response");
 		var timeout;
-
+		
         validate.onclick = function() {
         	evaluate();
-        }
+        };
+
+        document.onkeypress = function (e) {
+	    	if (e.which == 13) {
+	        	evaluate();
+	    	}
+		};
 
 	    function display_score() {
 	        score_span.innerHTML="Score: " + score;
@@ -44,7 +50,7 @@ define(["sugar-web/activity/activity"], function (activity) {
 					number_list.push(b);
 				}
 			
-			true_result= function(){
+			true_result = function(){
 				var r= ""+ number_list[0] +op[0] +number_list[1] +op[1] +number_list[2];
 				return eval(r)
 			}
