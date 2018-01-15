@@ -28,14 +28,13 @@
     <br>
     <form>
       <p>
-           <label for="response">Your result</label> : 
-           <input type="text" name="response" id="response" 
-           onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+        <label for="response">Your result</label> : 
+        <input type="text" name="response" id="response" 
+           onkeypress='return (event.charCode >= 48 && event.charCode <= 57)  || (event.charCode == 45)' />
       </p>
       <br>
       <span id="Clock">...</span>
     </form>  <button id="my-button" title="Validate">Validate</button>
-    
     <div id="final"></div>
   </div>
 </body>
